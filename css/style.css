@@ -6,19 +6,30 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+
+/*10px = 1rem*/
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; 
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header {
@@ -37,13 +48,13 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px; /*la posición es respecto al padre que es el header, para que empiece a contar desde ahí añadimos 
+    top: 4rem;
+    left: 4rem; /*la posición es respecto al padre que es el header, para que empiece a contar desde ahí añadimos 
     la propiedad position:relative al padre (header)*/
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -58,14 +69,14 @@ body {
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;/*para que lo que hay detrás del elemeno permanezca ocuta y no se mueva nada y no haya shaking*/
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -74,9 +85,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
 
     animation-name: moveInRight;
     animation-duration: 1s;
@@ -86,11 +97,11 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px) ;
+        transform: translateX(1rem) ;
     }
 
     100% {
@@ -102,11 +113,11 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px) ;
+        transform: translateX(-1rem) ;
     }
 
     100% {
@@ -118,7 +129,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
@@ -131,21 +142,22 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    font-size: 1.6rem;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 .btn:active {
-    transform: translateY(-1px); /*respecto al estado inicial, no al hover*/
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    transform: translateY(-.1rem); /*respecto al estado inicial, no al hover*/
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
 .btn-white {
@@ -158,7 +170,7 @@ body {
     display: inline-block; /*igual que el botón que tenemos*/
     height: 100%; /*ocupa el 100% del botón original y lo mismo con el ancho*/
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute; /*esto hará que se vea detrás y herede del botón y no del header, asímismo hemos de especificar en el btn que la posicion sea relative*/
     top: 0;
     left: 0;
