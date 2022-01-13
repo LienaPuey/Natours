@@ -1,0 +1,8 @@
+@mixin clearfix {
+    //agrega (appends) un pseudoelemento después del elemento que después eliminará(clear) los floats
+    &::after {
+        content: "";//vacío porque no queremos ver el elemento en la página
+        display: table; //versión standard de clearfix
+        clear: both; //ambos floats
+    }
+}
