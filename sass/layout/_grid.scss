@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto; //centrar bloques dentro de otros bloques
 
     &:not(:last-child){
@@ -11,7 +10,6 @@
     @include clearfix;
 
     [class^="col-"] { //el símbolo ^ nos permite seleccionar solo los que empiezan con el valor que le demos, en este caso "col-", si aplicamos el símbolo * elegirá cualquier clase con ese elemento, si utilizamos $ se aplicará a todos los elementos que terminen con ese valor
-        background-color: orangered;
         float: left;
 
         &:not(:last-child) {
