@@ -4,3 +4,13 @@
     margin-top: -20vh; //porque el header es un polígono que ocupa 75vh de un total de 95vh
     
 }
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../img/nat-4.jpg);
+        background-size: cover;
+}
