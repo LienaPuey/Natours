@@ -36,6 +36,15 @@
             background-color: $color-white;
         }
     }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after{
+            background-color: $color-primary;
+        }
+    }
     
     &::after { /*creamos un botón exactamente igual que el que tenemos pero escondido detrás, cuando nos alejamos del elemento principal aparece este, se trata como un hijo del anterior */
         content: "";
