@@ -391,7 +391,7 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.form__group:not(:last-child) {
+.form__group {
   margin-bottom: 2rem; }
 
 .form__input {
